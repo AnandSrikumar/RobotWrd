@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: RobotWrd
+Version: 0.1
+Summary: WRD automation using ROBOT
+Home-page: http://github.com/AnandSrikumar
+Author: Pervacio
+Author-email: pervacio@example.com
+License: MIT
+Description: Really, the funniest around.
+Keywords: funniest joke comedy flying circus
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Text Processing :: Linguistic

@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.5.2 on linux)" generated="20180607 13:00:24.335">
+<suite source="/home/shiva/WRDAndroid/L1 Test Suite/BatteryFlow.robot" id="s1" name="BatteryFlow">
+<test id="s1-t1" name="Set Screenshot Directory Path">
+<kw library="CommonBase" name="Screenshots Directory Path">
+<kw library="Selenium2Library" name="Set Screenshot Directory">
+<doc>Sets the directory for captured screenshots.</doc>
+<arguments>
+<arg>${ScreenshotDirectory}</arg>
+</arguments>
+<status starttime="20180607 13:00:24.599" status="PASS" endtime="20180607 13:00:24.599"></status>
+</kw>
+<status starttime="20180607 13:00:24.598" status="PASS" endtime="20180607 13:00:24.599"></status>
+</kw>
+<kw name="logInfo">
+<arguments>
+<arg>Set Screenshpts Directory Path</arg>
+</arguments>
+<msg level="FAIL" timestamp="20180607 13:00:24.607">No keyword with name 'logInfo' found.</msg>
+<status starttime="20180607 13:00:24.606" status="FAIL" endtime="20180607 13:00:24.607"></status>
+</kw>
+<status starttime="20180607 13:00:24.597" critical="yes" status="FAIL" endtime="20180607 13:00:24.607">No keyword with name 'logInfo' found.</status>
+</test>
+<test id="s1-t2" name="Launching Chrome Browser">
+<kw library="CommonBase" name="Launch Browser">
+<kw library="BuiltIn" name="Evaluate">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${chrome_options}</var>
+</assign>
+<msg level="INFO" timestamp="20180607 13:00:24.610">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7ff43709ce48&gt;</msg>
+<status starttime="20180607 13:00:24.610" status="PASS" endtime="20180607 13:00:24.610"></status>
+</kw>
+<kw library="BuiltIn" name="Call Method">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>headless</arg>
+</arguments>
+<status starttime="20180607 13:00:24.611" status="PASS" endtime="20180607 13:00:24.611"></status>
+</kw>
+<kw library="BuiltIn" name="Call Method">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${chrome_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg level="INFO" timestamp="20180607 13:00:24.612">${options} = {'version': '', 'browserName': 'chrome', 'platform': 'ANY', 'goog:chromeOptions': {'extensions': [], 'args': ['headless']}}</msg>
+<status starttime="20180607 13:00:24.612" status="PASS" endtime="20180607 13:00:24.612"></status>
+</kw>
+<kw library="Selenium2Library" name="Open Browser">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${ROOT}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 13:00:24.613">Opening browser 'chrome' to base url 'http://wrddemo.pervacioone.com:8080/'.</msg>
+<status starttime="20180607 13:00:24.613" status="PASS" endtime="20180607 13:00:29.215"></status>
+</kw>
+<kw library="BuiltIn" name="Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>&gt;&gt;&gt;&gt;Launching Chrome browser</arg>
+</arguments>
+<status starttime="20180607 13:00:29.216" status="PASS" endtime="20180607 13:00:29.216"></status>
+</kw>
+<kw library="Selenium2Library" name="Wait Until Element Is Visible">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${login}</arg>
+</arguments>
+<status starttime="20180607 13:00:29.216" status="PASS" endtime="20180607 13:00:29.254"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 13:00:31.255">Slept 2 seconds</msg>
+<status starttime="20180607 13:00:29.254" status="PASS" endtime="20180607 13:00:31.255"></status>
+</kw>
+<status starttime="20180607 13:00:24.608" status="PASS" endtime="20180607 13:00:31.255"></status>
+</kw>
+<kw name="logInfo">
+<arguments>
+<arg>Browser Launched</arg>
+</arguments>
+<msg level="FAIL" timestamp="20180607 13:00:31.262">No keyword with name 'logInfo' found.</msg>
+<status starttime="20180607 13:00:31.262" status="FAIL" endtime="20180607 13:00:31.262"></status>
+</kw>
+<status starttime="20180607 13:00:24.608" critical="yes" status="FAIL" endtime="20180607 13:00:31.262">No keyword with name 'logInfo' found.</status>
+</test>
+<test id="s1-t3" name="Entering User Name">
+<kw library="CommonBase" name="Enter User Name">
+<kw library="Selenium2Library" name="Input Text">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${UName}</arg>
+<arg>pervacio</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 13:00:31.264">Typing text 'pervacio' into text field 'username'.</msg>
+<status starttime="20180607 13:00:31.264" status="PASS" endtime="20180607 13:00:31.399"></status>
+</kw>
+<kw library="BuiltIn" name="Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>&gt;&gt;&gt;&gt;Entered User name</arg>
+</arguments>
+<status starttime="20180607 13:00:31.399" status="PASS" endtime="20180607 13:00:31.400"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 13:00:33.400">Slept 2 seconds</msg>
+<status starttime="20180607 13:00:31.400" status="PASS" endtime="20180607 13:00:33.401"></status>
+</kw>
+<status starttime="20180607 13:00:31.263" status="PASS" endtime="20180607 13:00:33.401"></status>
+</kw>
+<kw name="logInfo">
+<arguments>
+<arg>Entered User Name</arg>
+</arguments>
+<msg level="FAIL" timestamp="20180607 13:00:33.407">No keyword with name 'logInfo' found.</msg>
+<status starttime="20180607 13:00:33.407" status="FAIL" endtime="20180607 13:00:33.407"></status>
+</kw>
+<status starttime="20180607 13:00:31.263" critical="yes" status="FAIL" endtime="20180607 13:00:33.408">No keyword with name 'logInfo' found.</status>
+</test>
+<test id="s1-t4" name="Entering Password">
+<kw library="CommonBase" name="Enter Password">
+<kw library="Selenium2Library" name="Input Text">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${pwd}</arg>
+<arg>pervacio</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 13:00:33.413">Typing text 'pervacio' into text field 'password'.</msg>
+<status starttime="20180607 13:00:33.412" status="PASS" endtime="20180607 13:00:33.609"></status>
+</kw>
+<kw library="BuiltIn" name="Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>&gt;&gt;&gt;&gt;Entered Password</arg>
+</arguments>
+<status starttime="20180607 13:00:33.610" status="PASS" endtime="20180607 13:00:33.611"></status>
+</kw>
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 13:00:35.614">Slept 2 seconds</msg>
+<status starttime="20180607 13:00:33.613" status="PASS" endtime="20180607 13:00:35.614"></status>
+</kw>
+<status starttime="20180607 13:00:33.412" status="PASS" endtime="20180607 13:00:35.614"></status>
+</kw>
+<status starttime="20180607 13:00:33.411" critical="yes" status="PASS" endtime="20180607 13:00:35.614"></status>
+</test>
+<test id="s1-t5" name="Click Login Button">
+<kw library="CommonBase" name="Click On Login Button">
+<kw library="Selenium2Library" name="Click Element">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 13:00:35.618">Clicking element 'login_button'.</msg>
+<status starttime="20180607 13:00:35.617" status="PASS" endtime="20180607 13:00:40.563"></status>
+</kw>
+<kw library="BuiltIn" name="Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>&gt;&gt;&gt;&gt;Clicked on Login button</arg>
+</arguments>
+<status starttime="20180607 13:00:40.563" status="PASS" endtime="20180607 13:00:40.564"></status>
+</kw>
+<kw library="Selenium2Library" name="Wait Until Element Is Visible">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${HOME_IMAGE}</arg>
+<arg>60s</arg>
+</arguments>
+<kw name="Capture Page Screenshot">
+<msg level="FAIL" timestamp="20180607 13:00:40.569">Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<status starttime="20180607 13:00:40.568" status="FAIL" endtime="20180607 13:00:40.569"></status>
+</kw>
+<msg level="WARN" timestamp="20180607 13:00:40.569">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<msg level="FAIL" timestamp="20180607 13:00:40.574">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=66.0.3359.170)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-43-generic x86_64)
+</msg>
+<status starttime="20180607 13:00:40.564" status="FAIL" endtime="20180607 13:00:40.574"></status>
+</kw>
+<status starttime="20180607 13:00:35.616" status="FAIL" endtime="20180607 13:00:40.575"></status>
+</kw>
+<status starttime="20180607 13:00:35.615" critical="yes" status="FAIL" endtime="20180607 13:00:40.575">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=66.0.3359.170)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-43-generic x86_64)
+</status>
+</test>
+<test id="s1-t6" name="Click Home Image">
+<kw library="ProjBase" name="Click Home Image On Welcome Page">
+<kw library="BuiltIn" name="Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>&gt;&gt;&gt;&gt;Clicked on Home image</arg>
+</arguments>
+<status starttime="20180607 13:00:40.577" status="PASS" endtime="20180607 13:00:40.578"></status>
+</kw>
+<kw library="Selenium2Library" name="Click Element">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HOME_IMAGE}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 13:00:40.578">Clicking element '//div[@class='diagnostic-module-img']'.</msg>
+<kw name="Capture Page Screenshot">
+<msg level="FAIL" timestamp="20180607 13:00:40.581">Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<status starttime="20180607 13:00:40.581" status="FAIL" endtime="20180607 13:00:40.581"></status>
+</kw>
+<msg level="WARN" timestamp="20180607 13:00:40.581">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<msg level="FAIL" timestamp="20180607 13:00:40.582">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=66.0.3359.170)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-43-generic x86_64)
+</msg>
+<status starttime="20180607 13:00:40.578" status="FAIL" endtime="20180607 13:00:40.582"></status>
+</kw>
+<status starttime="20180607 13:00:40.577" status="FAIL" endtime="20180607 13:00:40.582"></status>
+</kw>
+<status starttime="20180607 13:00:40.576" critical="yes" status="FAIL" endtime="20180607 13:00:40.582">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=66.0.3359.170)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-43-generic x86_64)
+</status>
+</test>
+<test id="s1-t7" name="Setup For Local Android Device">
+<kw library="Capabilities" name="Config For Android Device">
+<kw library="BuiltIn" name="Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${testBase}'=='Android_Local'</arg>
+<arg>Android Local Device Setup</arg>
+</arguments>
+<kw library="Capabilities" name="Android Local Device Setup">
+<kw library="BuiltIn" name="Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>If condition is matched...Appium server started...</arg>
+</arguments>
+<status starttime="20180607 13:00:40.585" status="PASS" endtime="20180607 13:00:40.585"></status>
+</kw>
+<kw library="AppiumLibrary" name="Open Application">
+<doc>Opens a new application to given Appium server.</doc>
+<arguments>
+<arg>${REMOTE_URL_Local}</arg>
+<arg>platformName=${PLATFORM_NAME_Android}</arg>
+<arg>platformVersion=${PLATFORM_VERSION_Android}</arg>
+<arg>deviceName=${DEVICE_NAME_Android}</arg>
+<arg>appPackage=${Package}</arg>
+<arg>appActivity=${Activity}</arg>
+<arg>newCommandTimeout=${Timeout}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 13:00:40.586">Could not connect to port 4723 on host localhost</msg>
+<msg level="INFO" timestamp="20180607 13:00:40.586">Could not get IP address for host: localhost</msg>
+<msg level="FAIL" timestamp="20180607 13:00:40.590">URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</msg>
+<status starttime="20180607 13:00:40.585" status="FAIL" endtime="20180607 13:00:40.590"></status>
+</kw>
+<status starttime="20180607 13:00:40.584" status="FAIL" endtime="20180607 13:00:40.590"></status>
+</kw>
+<status starttime="20180607 13:00:40.584" status="FAIL" endtime="20180607 13:00:40.590"></status>
+</kw>
+<status starttime="20180607 13:00:40.583" status="FAIL" endtime="20180607 13:00:40.590"></status>
+</kw>
+<status starttime="20180607 13:00:40.583" critical="yes" status="FAIL" endtime="20180607 13:00:40.590">URLError: &lt;urlopen error [Errno 111] Connection refused&gt;</status>
+</test>
+<test id="s1-t8" name="Providing App Permissions">
+<kw library="ProjBase" name="App Permissions">
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 13:00:43.592">Slept 3 seconds</msg>
+<status starttime="20180607 13:00:40.592" status="PASS" endtime="20180607 13:00:43.593"></status>
+</kw>
+<kw library="AppiumLibrary" name="Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${PermissionOK}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 13:00:43.594">Clicking element '//*[contains(@resource-id,'android:id/button1')]'.</msg>
+<msg level="FAIL" timestamp="20180607 13:00:43.596">No application is open</msg>
+<status starttime="20180607 13:00:43.593" status="FAIL" endtime="20180607 13:00:43.596"></status>
+</kw>
+<status starttime="20180607 13:00:40.591" status="FAIL" endtime="20180607 13:00:43.597"></status>
+</kw>
+<status starttime="20180607 13:00:40.591" critical="yes" status="FAIL" endtime="20180607 13:00:43.597">No application is open</status>
+</test>
+<test id="s1-t9" name="Entering The Pin In The Device">
+<kw library="ProjBase" name="Enter Pin In The Local Android Device">
+<kw library="Selenium2Library" name="Get Element Attribute">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>${Pin}</arg>
+<arg>ng-reflect-value</arg>
+</arguments>
+<assign>
+<var>${val}</var>
+</assign>
+<kw name="Capture Page Screenshot">
+<msg level="FAIL" timestamp="20180607 13:00:43.606">Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<status starttime="20180607 13:00:43.606" status="FAIL" endtime="20180607 13:00:43.606"></status>
+</kw>
+<msg level="WARN" timestamp="20180607 13:00:43.606">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Giv</doc>
+<arguments>
+<arg>7s</arg>
+</arguments>
+<msg timestamp="20180607 13:00:50.450" level="INFO">Slept 7 seconds</msg>
+<status status</msg>
+<msg level="FAIL" timestamp="20180607 13:00:43.607">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=66.0.3359.170)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-43-generic x86_64)
+</msg>
+<status starttime="20180607 13:00:43.601" status="FAIL" endtime="20180607 13:00:43.607"></status>
+</kw>
+<status starttime="20180607 13:00:43.599" status="FAIL" endtime="20180607 13:00:43.607"></status>
+</kw>
+<status starttime="20180607 13:00:43.598" critical="yes" status="FAIL" endtime="20180607 13:00:43.607">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=66.0.3359.170)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-43-generic x86_64)
+</status>
+</test>
+<test id="s1-t10" name="Next Button Device Info Page">
+<kw library="ProjBase" name="Click Next In Device Info Page">
+<kw library="BuiltIn" name="Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>7s</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 13:00:50.609">Slept 7 seconds</msg>
+<status starttime="20180607 13:00:43.609" status="PASS" endtime="20180607 13:00:50.610"></status>
+</kw>
+<kw library="Selenium2Library" name="Click Element">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${NEXT_BUTTON}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 13:00:50.611">Clicking element '//button[@class='footer-button-active cursor-pointer margin-right-20 active']'.</msg>
+<kw name="Capture Page Screenshot">
+<msg level="FAIL" timestamp="20180607 13:00:50.616">Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<status starttime="20180607 13:00:50.616" status="FAIL" endtime="20180607 13:00:50.616"></status>
+</kw>
+<msg level="WARN" timestamp="20180607 13:00:50.616">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<msg level="FAIL" timestamp="20180607 13:00:50.617">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=66.0.3359.170)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-43-generic x86_64)
+</msg>
+<status starttime="20180607 13:00:50.610" status="FAIL" endtime="20180607 13:00:50.617"></status>
+</kw>
+<status starttime="20180607 13:00:43.608" status="FAIL" endtime="20180607 13:00:50.617"></status>
+</kw>
+<status starttime="20180607 13:00:43.608" critical="yes" status="FAIL" endtime="20180607 13:00:50.617">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=66.0.3359.170)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-43-generic x86_64)
+</status>
+</test>
+<test id="s1-t11" name="Battery And Charging Flow Selection">
+<kw library="ProjBase" name="Select BatteryCharging Flow and Click Next">
+<kw library="Selenium2Library" name="Click Element">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${BATTERY}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 13:00:50.619">Clicking element '//div[@class='issueIcon ic_batteryCharging']'.</msg>
+<kw name="Capture Page Screenshot">
+<msg level="FAIL" timestamp="20180607 13:00:50.622">Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<status starttime="20180607 13:00:50.622" status="FAIL" endtime="20180607 13:00:50.623"></status>
+</kw>
+<msg level="WARN" timestamp="20180607 13:00:50.623">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<msg level="FAIL" timestamp="20180607 13:00:50.623">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=66.0.3359.170)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-43-generic x86_64)
+</msg>
+<status starttime="20180607 13:00:50.619" status="FAIL" endtime="20180607 13:00:50.623"></status>
+</kw>
+<status starttime="20180607 13:00:50.619" status="FAIL" endtime="20180607 13:00:50.624"></status>
+</kw>
+<status starttime="20180607 13:00:50.618" critical="yes" status="FAIL" endtime="20180607 13:00:50.624">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=66.0.3359.170)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-43-generic x86_64)
+</status>
+</test>
+<test id="s1-t12" name="Wait For To Complete All Auto Tests">
+<kw library="ProjBase" name="Wait Until Auto Tests Run">
+<kw library="Selenium2Library" name="Wait Until Element Is Visible">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${NEXT_BUTTON}</arg>
+<arg>500s</arg>
+</arguments>
+<kw name="Capture Page Screenshot">
+<msg level="FAIL" timestamp="20180607 13:00:50.629">Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<status starttime="20180607 13:00:50.629" status="FAIL" endtime="20180607 13:00:50.629"></status>
+</kw>
+<msg level="WARN" timestamp="20180607 13:00:50.629">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<msg level="FAIL" timestamp="20180607 13:00:50.630">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=66.0.3359.170)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-43-generic x86_64)
+</msg>
+<status starttime="20180607 13:00:50.626" status="FAIL" endtime="20180607 13:00:50.630"></status>
+</kw>
+<status starttime="20180607 13:00:50.625" status="FAIL" endtime="20180607 13:00:50.630"></status>
+</kw>
+<status starttime="20180607 13:00:50.624" critical="yes" status="FAIL" endtime="20180607 13:00:50.631">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=66.0.3359.170)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-43-generic x86_64)
+</status>
+</test>
+<test id="s1-t13" name="Go To Manual Test Page">
+<kw library="ProjBase" name="Click Next In Auto Test Page">
+<kw library="Selenium2Library" name="Click Element">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${NEXT_BUTTON}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 13:00:50.632">Clicking element '//button[@class='footer-button-active cursor-pointer margin-right-20 active']'.</msg>
+<kw name="Capture Page Screenshot">
+<msg level="FAIL" timestamp="20180607 13:00:50.635">Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<status starttime="20180607 13:00:50.635" status="FAIL" endtime="20180607 13:00:50.635"></status>
+</kw>
+<msg level="WARN" timestamp="20180607 13:00:50.636">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<msg level="FAIL" timestamp="20180607 13:00:50.636">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=66.0.3359.170)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-43-generic x86_64)
+</msg>
+<status starttime="20180607 13:00:50.632" status="FAIL" endtime="20180607 13:00:50.636"></status>
+</kw>
+<status starttime="20180607 13:00:50.632" status="FAIL" endtime="20180607 13:00:50.637"></status>
+</kw>
+<status starttime="20180607 13:00:50.631" critical="yes" status="FAIL" endtime="20180607 13:00:50.637">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=66.0.3359.170)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-43-generic x86_64)
+</status>
+</test>
+<test id="s1-t14" name="Go To Test Result Page">
+<kw library="ProjBase" name="Click Next In Manual Test Page">
+<kw library="Selenium2Library" name="Get WebElements">
+<doc>Returns list of WebElement objects matching the ``locator``.</doc>
+<arguments>
+<arg>xpath=//button</arg>
+</arguments>
+<assign>
+<var>@{buttons}</var>
+</assign>
+<kw name="Capture Page Screenshot">
+<msg level="FAIL" timestamp="20180607 13:00:50.641">Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<status starttime="20180607 13:00:50.641" status="FAIL" endtime="20180607 13:00:50.641"></status>
+</kw>
+<msg level="WARN" timestamp="20180607 13:00:50.642">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<msg level="FAIL" timestamp="20180607 13:00:50.642">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=66.0.3359.170)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-43-generic x86_64)
+</msg>
+<status starttime="20180607 13:00:50.638" status="FAIL" endtime="20180607 13:00:50.642"></status>
+</kw>
+<status starttime="20180607 13:00:50.638" status="FAIL" endtime="20180607 13:00:50.643"></status>
+</kw>
+<status starttime="20180607 13:00:50.637" critical="yes" status="FAIL" endtime="20180607 13:00:50.643">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=66.0.3359.170)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-43-generic x86_64)
+</status>
+</test>
+<test id="s1-t15" name="Go To Resolution Page">
+<kw library="ProjBase" name="Click StepByStep In Test Result Page">
+<kw library="Selenium2Library" name="Click Element">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${STEP_BY_STEP}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 13:00:50.645">Clicking element '//button[@class='footer-button-active cursor-pointer margin-right-20 active']'.</msg>
+<kw name="Capture Page Screenshot">
+<msg level="FAIL" timestamp="20180607 13:00:50.649">Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<status starttime="20180607 13:00:50.649" status="FAIL" endtime="20180607 13:00:50.649"></status>
+</kw>
+<msg level="WARN" timestamp="20180607 13:00:50.650">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<msg level="FAIL" timestamp="20180607 13:00:50.650">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=66.0.3359.170)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-43-generic x86_64)
+</msg>
+<status starttime="20180607 13:00:50.644" status="FAIL" endtime="20180607 13:00:50.650"></status>
+</kw>
+<status starttime="20180607 13:00:50.644" status="FAIL" endtime="20180607 13:00:50.650"></status>
+</kw>
+<status starttime="20180607 13:00:50.643" critical="yes" status="FAIL" endtime="20180607 13:00:50.650">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=66.0.3359.170)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-43-generic x86_64)
+</status>
+</test>
+<test id="s1-t16" name="Go To Summary Page">
+<kw library="ProjBase" name="Go To Summary Page">
+<kw library="Selenium2Library" name="Click Element">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${SUMMARY_BUTTON}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 13:00:50.652">Clicking element '//button[@class='footer-button-active cursor-pointer margin-right-20 active']'.</msg>
+<kw name="Capture Page Screenshot">
+<msg level="FAIL" timestamp="20180607 13:00:50.654">Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<status starttime="20180607 13:00:50.654" status="FAIL" endtime="20180607 13:00:50.655"></status>
+</kw>
+<msg level="WARN" timestamp="20180607 13:00:50.655">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<msg level="FAIL" timestamp="20180607 13:00:50.655">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=66.0.3359.170)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-43-generic x86_64)
+</msg>
+<status starttime="20180607 13:00:50.652" status="FAIL" endtime="20180607 13:00:50.655"></status>
+</kw>
+<status starttime="20180607 13:00:50.651" status="FAIL" endtime="20180607 13:00:50.655"></status>
+</kw>
+<status starttime="20180607 13:00:50.651" critical="yes" status="FAIL" endtime="20180607 13:00:50.656">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=66.0.3359.170)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-43-generic x86_64)
+</status>
+</test>
+<test id="s1-t17" name="Go To Home Page">
+<kw library="ProjBase" name="End Session">
+<kw library="Selenium2Library" name="Click Element">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${END_SESSION}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 13:00:50.657">Clicking element '//button[@class='footer-button-active cursor-pointer margin-right-20 active'][2]'.</msg>
+<kw name="Capture Page Screenshot">
+<msg level="FAIL" timestamp="20180607 13:00:50.660">Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<status starttime="20180607 13:00:50.660" status="FAIL" endtime="20180607 13:00:50.660"></status>
+</kw>
+<msg level="WARN" timestamp="20180607 13:00:50.660">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<msg level="FAIL" timestamp="20180607 13:00:50.660">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=66.0.3359.170)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-43-generic x86_64)
+</msg>
+<status starttime="20180607 13:00:50.657" status="FAIL" endtime="20180607 13:00:50.661"></status>
+</kw>
+<status starttime="20180607 13:00:50.656" status="FAIL" endtime="20180607 13:00:50.661"></status>
+</kw>
+<status starttime="20180607 13:00:50.656" critical="yes" status="FAIL" endtime="20180607 13:00:50.661">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=66.0.3359.170)
+  (Driver info: chromedriver=2.35.528139 (47ead77cb35ad2a9a83248b292151462a66cd881),platform=Linux 4.13.0-43-generic x86_64)
+</status>
+</test>
+<test id="s1-t18" name="Uninstall App After Diagnosis">
+<kw library="ProjBase" name="Uninstall Application In The Device">
+<kw library="AppiumLibrary" name="Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${UninstallApp}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 13:00:50.662">Clicking element '//*[contains(@resource-id,'android:id/button1')]'.</msg>
+<msg level="FAIL" timestamp="20180607 13:00:50.663">No application is open</msg>
+<status starttime="20180607 13:00:50.662" status="FAIL" endtime="20180607 13:00:50.663"></status>
+</kw>
+<status starttime="20180607 13:00:50.662" status="FAIL" endtime="20180607 13:00:50.663"></status>
+</kw>
+<status starttime="20180607 13:00:50.661" critical="yes" status="FAIL" endtime="20180607 13:00:50.663">No application is open</status>
+</test>
+<test id="s1-t19" name="Close The Browser">
+<kw library="CommonBase" name="Exit Browser">
+<kw library="Selenium2Library" name="Close Browser">
+<doc>Closes the current browser.</doc>
+<status starttime="20180607 13:00:50.664" status="PASS" endtime="20180607 13:00:50.670"></status>
+</kw>
+<kw library="BuiltIn" name="Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>&gt;&gt;&gt;&gt;Closing the browsers</arg>
+</arguments>
+<status starttime="20180607 13:00:50.671" status="PASS" endtime="20180607 13:00:50.671"></status>
+</kw>
+<status starttime="20180607 13:00:50.664" status="PASS" endtime="20180607 13:00:50.671"></status>
+</kw>
+<status starttime="20180607 13:00:50.663" critical="yes" status="PASS" endtime="20180607 13:00:50.671"></status>
+</test>
+<doc>WRD WEB-Battery Flow</doc>
+<status starttime="20180607 13:00:24.340" status="FAIL" endtime="20180607 13:00:50.673"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="17">Critical Tests</stat>
+<stat pass="2" fail="17">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat id="s1" pass="2" fail="17" name="BatteryFlow">BatteryFlow</stat>
+</suite>
+</statistics>
+<errors>
+<msg level="ERROR" timestamp="20180607 13:00:24.586">Error in file '/home/shiva/WRDAndroid/CommonUtils/CommonBase.robot': Importing test library './L1TestSuite/LogInitializer.Log' failed: ImportError: No module named './L1TestSuite/LogInitializer'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /home/shiva/WRDAndroid
+  /usr/lib/python35.zip
+  /usr/lib/python3.5
+  /usr/lib/python3.5/plat-x86_64-linux-gnu
+  /usr/lib/python3.5/lib-dynload
+  /usr/local/lib/python3.5/dist-packages
+  /usr/local/lib/python3.5/dist-packages/pip-10.0.1-py3.5.egg
+  /usr/lib/python3/dist-packages</msg>
+<msg level="WARN" timestamp="20180607 13:00:40.569">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<msg level="WARN" timestamp="20180607 13:00:40.581">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<msg level="WARN" timestamp="20180607 13:00:43.606">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<msg level="WARN" timestamp="20180607 13:00:50.616">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<msg level="WARN" timestamp="20180607 13:00:50.623">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<msg level="WARN" timestamp="20180607 13:00:50.629">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<msg level="WARN" timestamp="20180607 13:00:50.636">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<msg level="WARN" timestamp="20180607 13:00:50.642">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<msg level="WARN" timestamp="20180607 13:00:50.650">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<msg level="WARN" timestamp="20180607 13:00:50.655">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+<msg level="WARN" timestamp="20180607 13:00:50.660">Keyword 'Capture Page Screenshot' could not be run on failure: Multiple keywords with name 'Capture Page Screenshot' found. Give the full name of the keyword you want to use:
+    AppiumLibrary.Capture Page Screenshot
+    Selenium2Library.Capture Page Screenshot</msg>
+</errors>
+</robot>

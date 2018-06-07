@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.5.2 on linux)" generated="20180607 12:30:08.941">
+<suite name="BatteryFlow" id="s1" source="/home/shiva/WRDAndroid/L1 Test Suite/BatteryFlow.robot">
+<test name="LogVaribale Set" id="s1-t1">
+<kw name="logger">
+<arguments>
+<arg>vccc</arg>
+</arguments>
+<msg level="FAIL" timestamp="20180607 12:30:09.180">No keyword with name 'logger' found.</msg>
+<status status="FAIL" endtime="20180607 12:30:09.180" starttime="20180607 12:30:09.180"></status>
+</kw>
+<status status="FAIL" endtime="20180607 12:30:09.180" starttime="20180607 12:30:09.174" critical="yes">No keyword with name 'logger' found.</status>
+</test>
+<test name="Set Screenshot Directory Path" id="s1-t2">
+<kw name="Screenshots Directory Path" library="CommonBase">
+<kw name="Set Screenshot Directory" library="Selenium2Library">
+<doc>Sets the directory for captured screenshots.</doc>
+<arguments>
+<arg>${ScreenshotDirectory}</arg>
+</arguments>
+<status status="PASS" endtime="20180607 12:30:09.182" starttime="20180607 12:30:09.182"></status>
+</kw>
+<status status="PASS" endtime="20180607 12:30:09.182" starttime="20180607 12:30:09.181"></status>
+</kw>
+<kw name="Log Info" library="LogInitializer">
+<arguments>
+<arg>Set Screenshpts Directory Path</arg>
+</arguments>
+<msg level="FAIL" timestamp="20180607 12:30:09.183">Keyword 'LogInitializer.Log Info' expected 0 arguments, got 1.</msg>
+<status status="FAIL" endtime="20180607 12:30:09.183" starttime="20180607 12:30:09.183"></status>
+</kw>
+<status status="FAIL" endtime="20180607 12:30:09.183" starttime="20180607 12:30:09.181" critical="yes">Keyword 'LogInitializer.Log Info' expected 0 arguments, got 1.</status>
+</test>
+<test name="Launching Chrome Browser" id="s1-t3">
+<kw name="Launch Browser" library="CommonBase">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${chrome_options}</var>
+</assign>
+<msg level="INFO" timestamp="20180607 12:30:09.184">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7f91d0eb45c0&gt;</msg>
+<status status="PASS" endtime="20180607 12:30:09.184" starttime="20180607 12:30:09.184"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>headless</arg>
+</arguments>
+<status status="PASS" endtime="20180607 12:30:09.185" starttime="20180607 12:30:09.185"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${chrome_options}</arg>
+<arg>to_capabilities</arg>
+</arguments>
+<assign>
+<var>${options}</var>
+</assign>
+<msg level="INFO" timestamp="20180607 12:30:09.186">${options} = {'browserName': 'chrome', 'platform': 'ANY', 'version': '', 'goog:chromeOptions': {'args': ['headless'], 'extensions': []}}</msg>
+<status status="PASS" endtime="20180607 12:30:09.186" starttime="20180607 12:30:09.185"></status>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${ROOT}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 12:30:09.186">Opening browser 'chrome' to base url 'http://wrddemo.pervacioone.com:8080/'.</msg>
+<status status="PASS" endtime="20180607 12:30:17.333" starttime="20180607 12:30:09.186"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>&gt;&gt;&gt;&gt;Launching Chrome browser</arg>
+</arguments>
+<status status="PASS" endtime="20180607 12:30:17.335" starttime="20180607 12:30:17.334"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${login}</arg>
+</arguments>
+<status status="PASS" endtime="20180607 12:30:17.387" starttime="20180607 12:30:17.335"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 12:30:19.388">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180607 12:30:19.388" starttime="20180607 12:30:17.387"></status>
+</kw>
+<status status="PASS" endtime="20180607 12:30:19.388" starttime="20180607 12:30:09.184"></status>
+</kw>
+<kw name="Log Info" library="LogInitializer">
+<arguments>
+<arg>Browser Launched</arg>
+</arguments>
+<msg level="FAIL" timestamp="20180607 12:30:19.389">Keyword 'LogInitializer.Log Info' expected 0 arguments, got 1.</msg>
+<status status="FAIL" endtime="20180607 12:30:19.389" starttime="20180607 12:30:19.389"></status>
+</kw>
+<status status="FAIL" endtime="20180607 12:30:19.389" starttime="20180607 12:30:09.183" critical="yes">Keyword 'LogInitializer.Log Info' expected 0 arguments, got 1.</status>
+</test>
+<test name="Entering User Name" id="s1-t4">
+<kw name="Enter User Name" library="CommonBase">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${UName}</arg>
+<arg>pervacio</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 12:30:19.392">Typing text 'pervacio' into text field 'username'.</msg>
+<status status="PASS" endtime="20180607 12:30:19.527" starttime="20180607 12:30:19.391"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>&gt;&gt;&gt;&gt;Entered User name</arg>
+</arguments>
+<status status="PASS" endtime="20180607 12:30:19.527" starttime="20180607 12:30:19.527"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 12:30:21.528">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180607 12:30:21.528" starttime="20180607 12:30:19.528"></status>
+</kw>
+<status status="PASS" endtime="20180607 12:30:21.529" starttime="20180607 12:30:19.391"></status>
+</kw>
+<kw name="Log Info" library="LogInitializer">
+<arguments>
+<arg>Entered User Name</arg>
+</arguments>
+<msg level="FAIL" timestamp="20180607 12:30:21.529">Keyword 'LogInitializer.Log Info' expected 0 arguments, got 1.</msg>
+<status status="FAIL" endtime="20180607 12:30:21.529" starttime="20180607 12:30:21.529"></status>
+</kw>
+<status status="FAIL" endtime="20180607 12:30:21.530" starttime="20180607 12:30:19.390" critical="yes">Keyword 'LogInitializer.Log Info' expected 0 arguments, got 1.</status>
+</test>
+<test name="Entering Password" id="s1-t5">
+<kw name="Enter Password" library="CommonBase">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${pwd}</arg>
+<arg>pervacio</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 12:30:21.534">Typing text 'pervacio' into text field 'password'.</msg>
+<status status="PASS" endtime="20180607 12:30:21.626" starttime="20180607 12:30:21.533"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>&gt;&gt;&gt;&gt;Entered Password</arg>
+</arguments>
+<status status="PASS" endtime="20180607 12:30:21.627" starttime="20180607 12:30:21.627"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<status status="FAIL" endtime="20180607 12:30:23.341" starttime="20180607 12:30:21.627"></status>
+</kw>
+<status status="FAIL" endtime="20180607 12:30:23.341" starttime="20180607 12:30:21.532"></status>
+</kw>
+<status status="FAIL" endtime="20180607 12:30:23.341" starttime="20180607 12:30:21.531" critical="yes">Execution terminated by signal</status>
+</test>
+<test name="Click Login Button" id="s1-t6">
+<tags>
+<tag>robot-exit</tag>
+</tags>
+<status status="FAIL" endtime="20180607 12:30:23.343" starttime="201</msg>
+<status status="PASS" starttime="20180607 12:29:39.557" endtime="20180607 12:30:19.449"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>&gt;&gt;&gt;&gt;Clicked on Login button</arg>
+</arguments>
+<status status="PASS" starttime="20180607 12:30:19.449" endtime="20180607 12:30:19.450"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${HOME_IMAGE}</arg>
+<arg>60s</arg>
+</arguments>
+<status status="PASS" starttime="20180607 12:30:19.450" endtime="20180607 12:30:22.061"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 12:30:24.062">Slept 2 seconds</msg>
+<status status="PASS" starttime="20180607 12:30:22.061" endtime="20180607 12:30:24.062"></status>
+</kw>
+<status status="PASS" starttime="20180607 12:29:39.556" endtime="20180607 12:30:24.063"></status>
+</kw>
+<status status="PASS" starttime="20180607 12:29:39.554" endtime="20180607 12:30:24.063" critical="yes"></status>
+</test>
+<test id="s1-t7" name="Click Home Image">
+<kw name="Click Home Image On Welcome Page" library="ProjBase">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>&gt;&gt;&gt;&gt;Clicked on Home image</arg>
+</arguments>
+<status status="PASS" starttime="20180607 12:30:24.066" endtime="20180607 12:30:24.066"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${HOME_IMAGE}</arg>
+</arguments>
+<msg level="INFO" timestamp="20180607 12:30:24.067">Clicking element '//div[@class='diagnostic-module-img']'.</msg>
+<status status="PASS" starttime="20180607 12:30:24.067" endtime="20180607 12:30:24.132"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<status status="FAIL" starttime="20180607 12:30:24.133" endtime="20180607 12:30:24.517"></status>
+</kw>
+<status status="FAIL" starttime="20180607 12:30:24.065" endtime="20180607 12:30:24.517"></status>
+</kw>
+<status status="FAIL" starttime="20180607 12:30:24.064" endtime="20180607 12:30:24.517" critical="yes">Execution terminated by signal</status>
+</test>
+<test id="s1-t8" name="Setup For Local Android Device">
+<tags>
+<tag>robot-exit</tag>
+</tags>
+<status status="FAIL" starttime="20180607 12:30:24.518" endtime="20180607 12:30:24.519" critical="yes">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t9" name="Providing App Permissions">
+<tags>
+<tag>robot-exit</tag>
+</tags>
+<status status="FAIL" starttime="20180607 12:30:24.520" endtime="20180607 12:30:24.521" critical="yes">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t10" name="Entering The Pin In The Device">
+<tags>
+<tag>robot-exit</tag>
+</tags>
+<status status="FAIL" starttime="20180607 12:30:24.521" endtime="20180607 12:30:24.522" critical="yes">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t11" name="Next Button Device Info Page">
+<tags>
+<tag>robot-exit</tag>
+</tags>
+<status status="FAIL" starttime="20180607 12:30:24.523" endtime="20180607 12:30:24.523" critical="yes">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t12" name="Battery And Charging Flow Selection">
+<tags>
+<tag>robot-exit</tag>
+</tags>
+<status status="FAIL" starttime="20180607 12:30:24.524" endtime="20180607 12:30:24.524" critical="yes">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t13" name="Wait For To Complete All Auto Tests">
+<tags>
+<tag>robot-exit</tag>
+</tags>
+<status status="FAIL" starttime="20180607 12:30:24.525" endtime="20180607 12:30:24.525" critical="yes">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t14" name="Go To Manual Test Page">
+<tags>
+<tag>robot-exit</tag>
+</tags>
+<status status="FAIL" starttime="20180607 12:30:24.526" endtime="20180607 12:30:24.526" critical="yes">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t15" name="Go To Test Result Page">
+<tags>
+<tag>robot-exit</tag>
+</tags>
+<status status="FAIL" starttime="20180607 12:30:24.526" endtime="20180607 12:30:24.527" critical="yes">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t16" name="Go To Resolution Page">
+<tags>
+<tag>robot-exit</tag>
+</tags>
+<status status="FAIL" starttime="20180607 12:30:24.527" endtime="20180607 12:30:24.528" critical="yes">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t17" name="Go To Summary Page">
+<tags>
+<tag>robot-exit</tag>
+</tags>
+<status status="FAIL" starttime="20180607 12:30:24.529" endtime="20180607 12:30:24.529" critical="yes">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t18" name="Go To Home Page">
+<tags>
+<tag>robot-exit</tag>
+</tags>
+<status status="FAIL" starttime="20180607 12:30:24.529" endtime="20180607 12:30:24.530" critical="yes">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t19" name="Uninstall App After Diagnosis">
+<tags>
+<tag>robot-exit</tag>
+</tags>
+<status status="FAIL" starttime="20180607 12:30:24.530" endtime="20180607 12:30:24.531" critical="yes">Test execution stopped due to a fatal error.</status>
+</test>
+<test id="s1-t20" name="Close The Browser">
+<tags>
+<tag>robot-exit</tag>
+</tags>
+<status status="FAIL" starttime="20180607 12:30:24.531" endtime="20180607 12:30:24.532" critical="yes">Test execution stopped due to a fatal error.</status>
+</test>
+<doc>WRD WEB-Battery Flow</doc>
+<status status="FAIL" starttime="20180607 12:29:27.851" endtime="20180607 12:30:24.534"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="18" pass="2">Critical Tests</stat>
+<stat fail="18" pass="2">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" info="combined" fail="5" combined="NOT robot-exit">NOT robot-exit</stat>
+<stat pass="0" fail="13">robot-exit</stat>
+</tag>
+<suite>
+<stat id="s1" fail="18" pass="2" name="BatteryFlow">BatteryFlow</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
